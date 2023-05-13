@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:orel_it_abithra/data/bloc/science_bloc/science_bloc.dart';
 import 'package:orel_it_abithra/data/bloc/science_bloc/science_event.dart';
 import 'package:orel_it_abithra/data/bloc/science_bloc/science_state.dart';
 import 'package:orel_it_abithra/presentation/widgets/card_view.dart';
+import '../../data/bloc/science_bloc/science_bloc.dart';
 
 class ScienceScreen extends StatefulWidget {
   const ScienceScreen({Key? key}) : super(key: key);

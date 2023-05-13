@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:orel_it_abithra/data/bloc/business_bloc/business_bloc.dart';
-import 'package:orel_it_abithra/data/bloc/science_bloc/science_bloc.dart';
-import 'package:orel_it_abithra/data/bloc/technology_bloc/technology_bloc.dart';
 import 'package:orel_it_abithra/presentation/screens/business_screen.dart';
 import 'package:orel_it_abithra/presentation/screens/science_screen.dart';
 import 'package:orel_it_abithra/presentation/screens/technolgy_screen.dart';
+import '../../data/bloc/business_bloc/busniess_bloc.dart';
+import '../../data/bloc/science_bloc/science_bloc.dart';
+import '../../data/bloc/technology_bloc/technology_bloc.dart';
 import '../theme/colors.dart';
-import '../theme/text_style.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -37,9 +36,11 @@ class HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
+        title:  Text(
           'News',
-          style: CustomTextStyle.header,
+          style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+            color: Colors.white,
+          ),
         ),
         centerTitle: true,
         backgroundColor: AppColors.primary.shade100,
